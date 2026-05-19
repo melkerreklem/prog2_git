@@ -56,14 +56,14 @@ def sphere_volume(n, d): #Ex2, approximation
 
 def hypersphere_exact(n,d): #Ex2, real value
     #n is the number of points
-    # d is the number of dimensions of the sphere 
+    #d is the number of dimensions of the sphere 
     V = (m.pi**(d/2))/(m.gamma(d/2 + 1))
     return V
 
 #Ex3: parallel code - parallelize for loop
 def sphere_volume_parallel1(n,d,np=10):
     #n is the number of points
-    # d is the number of dimensions of the sphere
+    #d is the number of dimensions of the sphere
     #np is the number of processes
     with future.ProcessPoolExecutor() as ex:
         pn = [n for x in range(np)]
